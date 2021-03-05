@@ -13,3 +13,5 @@ In this project，we have used the following technology stack：
 > Frontend
 - Language：JavaScript
 - ...
+
+if this project has any bug, please take an issue or send email to yanglh@mail.dlut.edu.cn
