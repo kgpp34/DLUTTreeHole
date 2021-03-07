@@ -1,7 +1,23 @@
-POST http://localhost:8083/api/users
+@host = http://localhost:8083
+
+GET {{host}}/api/auth_user
+Authorization: Bearer ATlYiRQEgeX9EiFFdXVM0jeJhMYByqB0pQ9D8OshsnIm1dGceMGgDJhbwCRY5to9oFXo487sxLRMS8mpq3WvR
+
+###
+POST {{host}}/api/login
+Content-Type: application/json
+
+{
+    "email": "john@example.org"
+}
+
+###
+POST {{host}}/api/users
 Content-Type: application/json
 
 {
     "email": "john@example.org",
     "username": "john"
 }
+
+

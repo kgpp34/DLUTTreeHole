@@ -25,6 +25,11 @@ func (h *handler) createUser(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
+	if err == service.ErrEmailTaken || err == service.ErrUsernameTaken {
+		http.Error(w, err.Error(), http.StatusConflict)
+		return
+	}
+
 	if err != nil {
 		respondError(w, err)
 		return

@@ -18,6 +18,10 @@ var (
 	ErrInvalidEmail = errors.New("invalid email")
 	// ErrInvalidUsername used when the username is not valid
 	ErrInvalidUsername = errors.New("invalid username")
+	// ErrEmailTaken used when there is already an user registerer with that email
+	ErrEmailTaken = errors.New("email taken")
+	// ErrUsernameTaken used when there is already an user registered with that username
+	ErrUsernameTaken = errors.New("username taken")
 )
 
 // User model
@@ -40,7 +44,16 @@ func (s *Service) CreateUser(ctx context.Context, email, username string) error 
 
 	query := "insert into users (email, username) values($1, $2)"
 	_, err := s.db.ExecContext(ctx, query, email, username)
+	unique := isUniqueViolation(err)
+
+	if unique && strings.Contains(err.Error(), "email") {
+		return ErrEmailTaken
+	}
 	
+	if unique && strings.Contains(err.Error(), "username") {
+		return ErrUsernameTaken
+	}
+
 	if err != nil {
 		return fmt.Errorf("could not insert user: %v", err)
 	}
