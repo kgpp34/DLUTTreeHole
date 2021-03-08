@@ -24,9 +24,9 @@ var (
 
 // LoginOutput stand for Login output format
 type LoginOutput struct {
-	Token     string    `json: "token"`
-	ExpiresAt time.Time `json: "expiresAt"`
-	AuthUser  User      `json: "authUser"`
+	Token     string    `json:"token"`
+	ExpiresAt time.Time `json:"expiresAt"`
+	AuthUser  User      `json:"authUser"`
 }
 
 // AuthUserID from token

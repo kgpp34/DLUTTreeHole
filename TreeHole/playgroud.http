@@ -16,8 +16,10 @@ POST {{host}}/api/users
 Content-Type: application/json
 
 {
-    "email": "john@example.org",
-    "username": "john"
+    "email": "jane@example.org",
+    "username": "jane"
 }
 
-
+###
+POST {{host}}/api/users/jane/toggle_follow
+Authorization: Bearer ATlZ47P0czLEJu9Ya5le5IB4eaRxDgZjAcCxHDaMdDRBiGOiAhyPGAhOpmdlb9U2o6bNkiXO88pAT43mVkP48
