@@ -23,3 +23,7 @@ Content-Type: application/json
 ###
 POST {{host}}/api/users/jane/toggle_follow
 Authorization: Bearer ATlZ47P0czLEJu9Ya5le5IB4eaRxDgZjAcCxHDaMdDRBiGOiAhyPGAhOpmdlb9U2o6bNkiXO88pAT43mVkP48
+
+### 
+GET {{host}}/api/users/john 
+Authorization: Bearer ATlZjfAOcyiaNjNN8Fh3C9Sslzs8B4JpiGlE59i3GxfmxrW31OxbF8P2b7MnMtInHbgVdPxXCoBd7iQQtltxX
