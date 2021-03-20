@@ -26,4 +26,8 @@ Authorization: Bearer ATlZ47P0czLEJu9Ya5le5IB4eaRxDgZjAcCxHDaMdDRBiGOiAhyPGAhOpm
 
 ### 
 GET {{host}}/api/users/john 
-Authorization: Bearer ATlZjfAOcyiaNjNN8Fh3C9Sslzs8B4JpiGlE59i3GxfmxrW31OxbF8P2b7MnMtInHbgVdPxXCoBd7iQQtltxX
+Authorization: Bearer ATlcH535pmAxWV8zJJuTAFLLynXyWADVg48jzFgP5ouI4NLHStmFqC5rLCyNrpg0fw4SfJnmo0h0kmPcr43nK
+
+###
+GET {{host}}/api/users?search=john&first=1&after=1
+Authorization: Bearer ATlcHjkgECYiGYKhauHps12exsgw0j00yi3VZLdhJDuZCWvmD0uV39BSQqjB6u8bkwfV0SrYSuvqLDkY8XrjG
